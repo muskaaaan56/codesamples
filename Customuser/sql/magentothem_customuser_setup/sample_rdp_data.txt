@@ -1,0 +1,39 @@
+INSERT INTO `sap_customer_master` (`sap_cust_id`, `sales_organization_id`, `division`, `distribution_channel`, `name`, `website_code`) VALUES
+('0000000005', '1002', '01','5','DHB COMPONENTES  AUTOMOTIVOS S/A','la'),
+('0000000006', '1002', '01','5','TRANSJOI TRANSP LTDA','la'),
+('0000000312', '2001', '01','2','FURLANETTO-COMERCIO DE TINTAS LTDA','la'),
+('0000000313', '2001', '99','2','ERNESTO ALBERTO KOCHHANN ME','la')
+;
+
+INSERT INTO `sap_customer_address` (`partner_id`, `street_no`, `zip_code`, `city`, `state`, `country`,`name`) VALUES
+('0000000005', 'AV DAS INDUSTRIAS 864', '90200-290','PORTO ALEGRE','RS','BR','DHB COMPONENTES  AUTOMOTIVOS S/A'),
+('0000000006', 'R BENJAMIN CONSTANT 3301', '89217-001','JOINVILLE','SC','BR','TRANSJOI TRANSP LTDA'),
+('0000000312', 'TRAVESSA RAUL CISILOTTO 90', '95720-000','GARIBALDI','RS','BR','FURLANETTO-COMERCIO DE TINTAS LTDA'),
+('0000000313', 'R HORIZONTINA, 1357', '98910-000','TRES DE MAIO','RS','BR','ERNESTO ALBERTO KOCHHANN ME')
+;
+
+INSERT INTO `sap_customer_partner` (`sap_cust_id`, `address_type`, `partner_id`) VALUES
+('0000000005', 'AG', '0000000005'),
+('0000000005', 'WE', '0000000005'),
+('0000000006', 'AG', '0000000006'),
+('0000000006', 'WE', '0000000006'),
+('0000000312', 'AG', '0000000312'),
+('0000000312', 'WE', '0000000312'),
+('0000000313', 'AG', '0000000313'),
+('0000000313', 'WE', '0000000313')
+;
+
+INSERT INTO `axaltacore_salesarea` (`company_name`, `sales_organization_id`, `division`, `distribution_channel`, `name`, `iln`, `street_no`, `zip_code`, `city`, `country`, `email`, `phone`, `fax`, `website_id`) VALUES
+('DPC AIC Brazil-Exportação', '1002','01', '07',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC AIC Brazil-Venda Direta', '1002','01', '05',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Refinish Brazil - Frotista - Acabamento', '2001','01', '02',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Refinish Brazil - Frotista - Embalagem', '2001','06', '02',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Refinish Brazil - Frotista - Outros', '2001','99', '02',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Refinish Brazil - Varejo - Acabamento', '2001', '01','03',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Refinish Brazil - Varejo - Embalagem', '2001','06', '03',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Refinish Brazil - Varejo - Outros', '2001','99', '03',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Venez Flotilla', '1503', '50','01',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Venez Industrial', '1502','50', '01',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Venez Industrial Especial', '1502','50', '02',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Venezuela - Repintado', '2501','50', '01',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1)
+;

@@ -1,0 +1,112 @@
+<?xml version='1.0'?>
+<config>
+    <acl>
+        <resources>
+            <all>
+              <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                   <customer>
+                        <children>
+                          <manage translate="title" module="customer">
+                              <title>LA Users</title>
+                                <children>
+                                    <ssomanagelauser translate="title" module="customer">
+                                        <title>SSO Created Users</title>
+                                        <sort_order>10</sort_order>
+                                    </ssomanagelauser>
+                                    <managelauser>
+                                        <title>LA Users</title>
+                                        <sort_order>11</sort_order>
+                                    </managelauser>
+                                </children>
+                          </manage>
+                          <managena translate="title" module="customer">
+                              <title>NA Users</title>
+                                <children>
+                                    <managenauser>
+                                        <title>NA Users</title>
+                                        <sort_order>12</sort_order>
+                                    </managenauser>
+                                    <ssomanagenauser translate="title" module="customer">
+                                      <title>SSO Created Users</title>
+                                      <sort_order>13</sort_order>
+                                    </ssomanagenauser>
+                                </children>
+                          </managena>
+                          <managepartner>
+                              <title>NA Partner</title>
+                              <sort_order>14</sort_order>
+                          </managepartner>
+                        </children>
+                    </customer>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <salesareafunc translate='title' module='axaltacore_customuser'>
+                                        <title>Sales Area Functionality Section</title>
+                                        <sort_order>0</sort_order>
+                                    </salesareafunc>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <customer>
+            <children>
+                <manage translate="title" module="customer">
+                   <title>LA Users</title>
+                    <sort_order>0</sort_order>
+                    <children>
+                      <managelauser>
+                        <title>LA Users</title>
+                        <sort_order>1</sort_order>
+                        <action>adminhtml/customer/index/</action>
+                      </managelauser>
+                      <ssomanagelauser translate="title" module="customer">
+                          <title>SSO Created Users</title>
+                          <depends>
+                            <module>Axaltacore_Customsso</module>
+                          </depends>
+                          <action>adminhtml/customer/ssouser/</action>
+                          <sort_order>2</sort_order>
+                      </ssomanagelauser>
+                    </children>
+
+                </manage>
+
+                <managena translate="title" module="customer">
+                    <title>NA Users</title>
+                    <sort_order>1</sort_order>
+                    <children>
+                      <managenauser>
+                        <title>NA Users</title>
+                        <sort_order>1</sort_order>
+                        <action>adminhtml/customer_nauser/</action>
+                      </managenauser>
+                      <ssomanagenauser translate="title" module="customer">
+                          <title>SSO Created Users</title>
+                          <depends>
+                            <module>Axaltacore_Customsso</module>
+                          </depends>
+                          <action>adminhtml/customer/ssouserna/</action>
+                          <sort_order>2</sort_order>
+                      </ssomanagenauser>
+                    </children>
+                </managena>
+
+                <managepartner translate="title" module="customer">
+                    <title>NA Partners</title>
+                    <action>adminhtml/customer_napartner/</action>
+                    <sort_order>2</sort_order>
+                </managepartner>
+            </children>
+        </customer>
+    </menu>
+</config>

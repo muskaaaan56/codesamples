@@ -1,0 +1,75 @@
+INSERT INTO `sap_customer_master` (`sap_cust_id`, `sales_organization_id`, `division`, `distribution_channel`, `name`, `website_code`) VALUES
+('55475633', 'F510', 'DR','10','BERDEN FRANCISCO LUIS','la'),
+('55475634', 'F510', 'DR','10','ARCEDIACOMO MARIANO','la'),
+('55475635', 'F510', 'DR','10','ALEGRE JOSE MIGUEL','la'),
+('55475640', 'F510', 'DR','10','PINTURERIAS COLON DE ARGENTINA S.A.','la'),
+('55178668', 'F52A', 'CP','10','ELECTRO OPTICA SA DE CV','la'),
+('55407414', 'F52A', 'CP','10','EQUIPO AUTOMOTRIZ HEMEX SA DE CV','la')
+('55601486', 'F510', 'DR','10','PINTURERIAS COLON DE ARGENTINA S.A.','la')
+('55495153', 'F510', 'DR','10','PINTURERIAS COLON DE ARGENTINA S.A.','la');
+
+
+INSERT INTO `sap_customer_address` (`partner_id`, `street_no`, `zip_code`, `city`, `state`, `country`) VALUES
+('55475633', '25 DE MAYO 1901', 'B1824NNG','(1824)LANUS OESTE','CA','AR'),
+('55475634', 'REMEDIOS DE ESCALADA 83', 'M5570APA','(5570)SAN MARTIN','CA','AR'),
+('55475635', 'IRIGOYEN 2336', '3400','IRIGOYEN 2336','CA','AR'),
+('55475640', 'GENERAL PAZ 1230', 'D5732AGL','SAN LUIS','CA','AR'),
+('55495153', 'AV. PERON ESQ. PELAGIO LUNA 402', '5300','LA RIOJA','CA','AR'),
+('55601486', '202 PRIV CUMBRES DE ACULTZINGO', '54040','TLALNEPANTLA','CA','AR'),
+('55178668', 'VICARIO SEGURA 930', '4700','SAN FERNANDO DEL VALLE DE','CA','MX'),
+('55407414', 'CARR AL CASTILLO KM 10 1/2', '45680','EL SALTO','CA','MX')
+;
+
+INSERT INTO `sap_customer_partner` (`sap_cust_id`, `address_type`, `partner_id`) VALUES
+('55475633', 'AG', '55475633'),
+('55475633', 'WE', '55475633'),
+('55475634', 'AG', '55475634'),
+('55475634', 'WE', '55475634'),
+('55475635', 'AG', '55475635'),
+('55475635', 'WE', '55475635'),
+('55475640', 'AG', '55475640'),
+('55475640', 'WE', '55475640'),
+('55475640', 'WE', '55495153'),
+('55475640', 'WE', '55601486'),
+('55178668', 'AG', '55178668'),
+('55178668', 'WE', '55178668'),
+('55178668', 'WE', '55407414'),
+('55495153', 'AG', '55495153'),
+('55495153', 'WE', '55495153'),
+('55601486', 'AG', '55601486'),
+('55601486', 'WE', '55601486'),
+('55407414', 'WE', '55407414')
+;
+
+INSERT INTO `axaltacore_salesarea` (`company_name`, `sales_organization_id`, `division`, `distribution_channel`, `name`, `iln`, `street_no`, `zip_code`, `city`, `country`, `email`, `phone`, `fax`, `website_id`) VALUES
+('DPC Argentina-Refinish/Industrial DR', 'F510','DR', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Argentina-Refinish/Industrial OE', 'F510','OE', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DuPont Industrial Coatings Solutions - DICS', 'F510','MC', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Mexico - Coating Solutions', 'F52A','NC', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Mexico ACS CFP', 'F52A','CP', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Mexico ACS OEM', 'F52A', 'OE','10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Mexico Refinish', 'F52A','DR', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC México - MAX Recubrimientos', 'F52A','ER', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Mexico Arquitectonico', 'F52A','AC', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Colombia Industrial', 'F54G', 'MC','10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1),
+('DPC Colombia Repintado', 'F54G','DR', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 1)
+;
+
+INSERT INTO `sap_customer_master` (`sap_cust_id`, `sales_organization_id`, `division`, `distribution_channel`, `name`, `website_code`) VALUES
+('11', 'F510', 'DR','10','NA 11','na'),
+('22', 'F510', 'DR','10','NA 21','na')
+;
+INSERT INTO `sap_customer_address` (`partner_id`, `street_no`, `zip_code`, `city`, `state`, `country`) VALUES
+('11', '25 DE MAYO 1901', 'B1824NNG','(1824)LANUS OESTE','CA','AR'),
+('22', 'REMEDIOS DE ESCALADA 83', 'M5570APA','(5570)SAN MARTIN','CA','AR')
+;
+INSERT INTO `sap_customer_partner` (`sap_cust_id`, `address_type`, `partner_id`) VALUES
+('11', 'AG', '11'),
+('11', 'WE', '11'),
+('22', 'AG', '22'),
+('22', 'WE', '22')
+;
+INSERT INTO `axaltacore_salesarea` (`company_name`, `sales_organization_id`, `division`, `distribution_channel`, `name`, `iln`, `street_no`, `zip_code`, `city`, `country`, `email`, `phone`, `fax`, `website_id`) VALUES
+('na salesarea 11', 'F510','DR', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 2),
+('na salesarea 22', 'F510','OE', '10',  NULL, NULL, NULL, NULL, NULL, 'US', NULL, NULL, NULL, 2)
+;
